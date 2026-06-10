@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hailey Rosquist | GEOG 490 Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Hailey Rosquist</h1>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">CV</a>
+        <a href="portfolio.html">490 Portfolio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h2>GEOG 490 Portfolio</h2>
+      <p>Demographic and Economic Patterns in the Seattle-Tacoma-Bellevue Metropolitan Area</p>
+    </section>
+
+    <section class="card">
+      <h2>Introduction</h2>
+      <p>
+        For my GEOG 490 portfolio, I chose to focus on the Seattle-Tacoma-Bellevue
+        metropolitan area in Washington. This region is useful for demographic analysis
+        because it includes a large urban core, surrounding suburbs, and meaningful
+        variation in population, race and ethnicity, income, and spatial inequality.
+        Using census data and spatial analysis methods in R, this portfolio tells a
+        story about how demographic and economic patterns are distributed across the
+        metropolitan area.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Geography of Interest</h2>
+      <p>
+        The Seattle metropolitan area is an appropriate case study because it contains
+        dense urban neighborhoods, suburban communities, and areas with different levels
+        of income and demographic diversity. Census tracts are used as the main unit of
+        analysis because they are small enough to show neighborhood-level variation while
+        still being commonly used for ACS demographic and economic data.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 1: Median Household Income</h2>
+      <img src="figures/seattle_income_choropleth.png" alt="Seattle income choropleth map" />
+      <p>
+        This map shows median household income across census tracts in the Seattle area.
+        The map helps show that economic patterns are not evenly distributed across the
+        region. Some areas have higher income levels, while other tracts show lower
+        median household income. This figure adds to the case study by showing the
+        economic geography of the metropolitan area and helping connect demographic
+        patterns to broader questions of inequality and access.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 2: Total Population</h2>
+      <img src="figures/seattle_total_pop_choropleth.png" alt="Seattle total population choropleth map" />
+      <p>
+        This map displays total population by census tract. It shows where population
+        is most concentrated within the Seattle metropolitan area. Population patterns
+        are important because they help explain where demographic changes are most visible
+        and where infrastructure, housing, transportation, and services may be most needed.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 3: Race and Ethnicity Dot Density Map</h2>
+      <img src="figures/seattle_dot_density_map.png" alt="Seattle race and ethnicity dot density map" />
+      <p>
+        This dot density map shows the distribution of selected racial and ethnic groups
+        across the Seattle area. Instead of showing only tract-level percentages, the dot
+        density method helps visualize where people are located and how groups are
+        distributed across space. This map supports the portfolio narrative by showing
+        that race and ethnicity are spatially patterned within the metropolitan area.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 4: Young Persons Graduated Symbol Map</h2>
+      <img src="figures/seattle_young_persons_symbols.png" alt="Seattle young persons graduated symbol map" />
+      <p>
+        This map uses graduated symbols to show the distribution of young people across
+        the Seattle area. Larger symbols indicate places with higher numbers of young
+        residents. This figure helps show how age-related demographic patterns vary
+        across the region and adds another layer to understanding population composition.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 5: Segregation and Diversity</h2>
+      <img src="figures/figure1_seattle_msa_segregation.png" alt="Seattle segregation map" />
+      <p>
+        This map examines segregation and diversity across the Seattle metropolitan area.
+        Segregation analysis helps show whether different racial and ethnic groups are
+        evenly distributed or concentrated in particular areas. This method is important
+        because it moves beyond basic population counts and helps identify broader
+        patterns of separation, inequality, and uneven access within the region.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 6: Asian Location Quotient</h2>
+      <img src="figures/figure2_seattle_msa_asian_lq.png" alt="Seattle Asian location quotient map" />
+      <p>
+        This location quotient map focuses on the Asian population in the Seattle
+        metropolitan area. A location quotient shows where a group is more or less
+        concentrated compared with the region overall. This map helps identify places
+        where the Asian population has a stronger relative presence and supports a more
+        detailed interpretation of racial and ethnic geography.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 7: Geographically Weighted Regression</h2>
+      <img src="figures/figure1_gwr_map.png" alt="Seattle geographically weighted regression map" />
+      <p>
+        The geographically weighted regression analysis shows that relationships between
+        demographic and economic variables can vary across space. Instead of assuming one
+        relationship applies equally across the entire metropolitan area, GWR helps show
+        how local patterns may differ from one part of the region to another. This adds
+        methodological depth to the portfolio because it connects spatial modeling to the
+        demographic story.
+      </p>
+    </section>
+
+    <section class="figure-card">
+      <h2>Figure 8: K-Means Clustering</h2>
+      <img src="figures/figure2_kmeans_cluster_map.png" alt="Seattle k-means cluster map" />
+      <p>
+        The k-means cluster map groups census tracts with similar demographic and
+        economic characteristics. This method helps summarize complex data into clearer
+        spatial categories. The clusters make it easier to see how different types of
+        neighborhoods appear across the Seattle metropolitan area and how population,
+        race, income, and other variables combine into broader patterns.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Conclusion</h2>
+      <p>
+        Overall, the Seattle-Tacoma-Bellevue metropolitan area shows clear spatial
+        variation in population, race and ethnicity, income, segregation, and demographic
+        clustering. The maps and methods in this portfolio show that demographic change
+        is not evenly distributed across space. By combining census data, mapping, and
+        spatial analysis, this project demonstrates how geographic methods can be used
+        to tell a clearer story about urban inequality and metropolitan change.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hailey Rosquist | University of Oregon</p>
+  </footer>
+</body>
+</html>
