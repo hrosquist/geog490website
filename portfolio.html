@@ -1,165 +1,297 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hailey Rosquist | GEOG 490 Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hailey Rosquist Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <h1>Hailey Rosquist</h1>
+        <p>Data Science Student | GIS & Spatial Analysis</p>
+        <p>University of Oregon</p>
+    </header>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <nav>
-      <h1>Hailey Rosquist</h1>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="resume.html">CV</a>
-        <a href="portfolio.html">490 Portfolio</a>
-      </div>
+        <a href="#lab3">Lab 3</a>
+        <a href="#lab5">Lab 5</a>
+        <a href="#lab7">Lab 7</a>
+        <a href="#lab9">Lab 9</a>
     </nav>
-  </header>
 
-  <main>
-    <section class="page-title">
-      <h2>GEOG 490 Portfolio</h2>
-      <p>Demographic and Economic Patterns in the Seattle-Tacoma-Bellevue Metropolitan Area</p>
-    </section>
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
-    <section class="card">
-      <h2>Introduction</h2>
-      <p>
-        For my GEOG 490 portfolio, I chose to focus on the Seattle-Tacoma-Bellevue
-        metropolitan area in Washington. This region is useful for demographic analysis
-        because it includes a large urban core, surrounding suburbs, and meaningful
-        variation in population, race and ethnicity, income, and spatial inequality.
-        Using census data and spatial analysis methods in R, this portfolio tells a
-        story about how demographic and economic patterns are distributed across the
-        metropolitan area.
-      </p>
-    </section>
+    <main>
 
-    <section class="card">
-      <h2>Geography of Interest</h2>
-      <p>
-        The Seattle metropolitan area is an appropriate case study because it contains
-        dense urban neighborhoods, suburban communities, and areas with different levels
-        of income and demographic diversity. Census tracts are used as the main unit of
-        analysis because they are small enough to show neighborhood-level variation while
-        still being commonly used for ACS demographic and economic data.
-      </p>
-    </section>
+        <!-- =========================
+             LAB 3
+        ========================== -->
 
-    <section class="figure-card">
-      <h2>Figure 1: Median Household Income</h2>
-      <img src="figures/figure3_seattle_income_hotspots.png" alt="Seattle income choropleth map" />
-      <p>
-        This map shows median household income across census tracts in the Seattle area.
-        The map helps show that economic patterns are not evenly distributed across the
-        region. Some areas have higher income levels, while other tracts show lower
-        median household income. This figure adds to the case study by showing the
-        economic geography of the metropolitan area and helping connect demographic
-        patterns to broader questions of inequality and access.
-      </p>
-    </section>
+        <section class="project-section" id="lab3">
 
-    <section class="figure-card">
-      <h2>Figure 2: Total Population</h2>
-      <img src="figures/seattle_total_population_choropleth.png" alt="Seattle total population choropleth map" />
-      <p>
-        This map displays total population by census tract. It shows where population
-        is most concentrated within the Seattle metropolitan area. Population patterns
-        are important because they help explain where demographic changes are most visible
-        and where infrastructure, housing, transportation, and services may be most needed.
-      </p>
-    </section>
+            <h2>Lab 3 – Census Mapping and Visualization</h2>
 
-    <section class="figure-card">
-      <h2>Figure 3: Race and Ethnicity Dot Density Map</h2>
-      <img src="figures/seattle_dot_density_map.png" alt="Seattle race and ethnicity dot density map" />
-      <p>
-        This dot density map shows the distribution of selected racial and ethnic groups
-        across the Seattle area. Instead of showing only tract-level percentages, the dot
-        density method helps visualize where people are located and how groups are
-        distributed across space. This map supports the portfolio narrative by showing
-        that race and ethnicity are spatially patterned within the metropolitan area.
-      </p>
-    </section>
+            <div class="project-card">
+                <h3>Total Population Choropleth</h3>
 
-    <section class="figure-card">
-      <h2>Figure 4: Young Persons Graduated Symbol Map</h2>
-      <img src="figures/seattle_young_persons_graduated_symbols.png" alt="Seattle young persons graduated symbol map" />
-      <p>
-        This map uses graduated symbols to show the distribution of young people across
-        the Seattle area. Larger symbols indicate places with higher numbers of young
-        residents. This figure helps show how age-related demographic patterns vary
-        across the region and adds another layer to understanding population composition.
-      </p>
-    </section>
+                <p>
+                    This choropleth map visualizes total population by census tract
+                    in King County, Washington using 2020 Decennial Census data.
+                    Darker colors represent census tracts with larger populations,
+                    while lighter areas contain fewer residents. The map highlights
+                    how population is concentrated in the western urban corridor
+                    surrounding Seattle while eastern portions of the county are
+                    more rural and sparsely populated.
+                </p>
 
-    <section class="figure-card">
-      <h2>Figure 5: Segregation and Diversity</h2>
-      <img src="figures/figure1_seattle_msa_segregation.png" alt="Seattle segregation map" />
-      <p>
-        This map examines segregation and diversity across the Seattle metropolitan area.
-        Segregation analysis helps show whether different racial and ethnic groups are
-        evenly distributed or concentrated in particular areas. This method is important
-        because it moves beyond basic population counts and helps identify broader
-        patterns of separation, inequality, and uneven access within the region.
-      </p>
-    </section>
+                <img src="figures/seattle_total_population_choropleth.png"
+                     alt="Seattle Population Choropleth">
+            </div>
 
-    <section class="figure-card">
-      <h2>Figure 6: Asian Location Quotient</h2>
-      <img src="figures/figure2_seattle_msa_asian_lq.png" alt="Seattle Asian location quotient map" />
-      <p>
-        This location quotient map focuses on the Asian population in the Seattle
-        metropolitan area. A location quotient shows where a group is more or less
-        concentrated compared with the region overall. This map helps identify places
-        where the Asian population has a stronger relative presence and supports a more
-        detailed interpretation of racial and ethnic geography.
-      </p>
-    </section>
+            <div class="project-card">
+                <h3>Dot Density Map</h3>
 
-    <section class="figure-card">
-      <h2>Figure 7: Geographically Weighted Regression</h2>
-      <img src="figures/figure1_gwr_income_map.png" alt="Seattle geographically weighted regression map" />
-      <p>
-        The geographically weighted regression analysis shows that relationships between
-        demographic and economic variables can vary across space. Instead of assuming one
-        relationship applies equally across the entire metropolitan area, GWR helps show
-        how local patterns may differ from one part of the region to another. This adds
-        methodological depth to the portfolio because it connects spatial modeling to the
-        demographic story.
-      </p>
-    </section>
+                <p>
+                    This dot density map represents population distribution across
+                    King County, Washington. Each dot represents a fixed number
+                    of residents, helping visualize population clustering and
+                    settlement patterns. Dense clusters appear around Seattle
+                    and nearby suburbs, while eastern portions of the county
+                    show significantly lower population density.
+                </p>
 
-    <section class="figure-card">
-      <h2>Figure 8: K-Means Clustering</h2>
-      <img src="figures/figure2_kmeans_cluster_map.png" alt="Seattle k-means cluster map" />
-      <p>
-        The k-means cluster map groups census tracts with similar demographic and
-        economic characteristics. This method helps summarize complex data into clearer
-        spatial categories. The clusters make it easier to see how different types of
-        neighborhoods appear across the Seattle metropolitan area and how population,
-        race, income, and other variables combine into broader patterns.
-      </p>
-    </section>
+                <img src="figures/seattle_dot_density_map.png"
+                     alt="Seattle Dot Density Map">
+            </div>
 
-    <section class="card">
-      <h2>Conclusion</h2>
-      <p>
-        Overall, the Seattle-Tacoma-Bellevue metropolitan area shows clear spatial
-        variation in population, race and ethnicity, income, segregation, and demographic
-        clustering. The maps and methods in this portfolio show that demographic change
-        is not evenly distributed across space. By combining census data, mapping, and
-        spatial analysis, this project demonstrates how geographic methods can be used
-        to tell a clearer story about urban inequality and metropolitan change.
-      </p>
-    </section>
-  </main>
+            <div class="project-card">
+                <h3>Young Persons Graduated Symbols</h3>
 
-  <footer>
-    <p>Hailey Rosquist | University of Oregon</p>
-  </footer>
+                <p>
+                    This graduated symbol map displays the population under
+                    age 18 by census tract in King County, Washington using
+                    ACS 2020 estimates. Larger symbols represent tracts with
+                    greater numbers of young residents. The map demonstrates
+                    how family-oriented suburban areas tend to contain larger
+                    youth populations than central urban neighborhoods.
+                </p>
+
+                <img src="figures/seattle_young_persons_graduated_symbols.png"
+                     alt="Young Persons Map">
+            </div>
+
+        </section>
+
+        <!-- =========================
+             LAB 5
+        ========================== -->
+
+        <section class="project-section" id="lab5">
+
+            <h2>Lab 5 – Spatial Analysis and Modeling</h2>
+
+            <div class="project-card">
+                <h3>Portland-Vancouver Metro Tracts</h3>
+
+                <p>
+                    This map displays census tracts across the Portland-Vancouver-
+                    Hillsboro metropolitan area spanning Oregon and Washington.
+                    The metropolitan boundary is shown using a bold outline,
+                    illustrating how metropolitan regions frequently cross
+                    state boundaries. The map highlights the geographic scale
+                    and spatial organization of the metro area.
+                </p>
+
+                <img src="figures/figure1_portland_vancouver_metro_tracts.png"
+                     alt="Portland Metro Tracts">
+            </div>
+
+            <div class="project-card">
+                <h3>Income Hotspot Analysis</h3>
+
+                <p>
+                    This Getis-Ord Gi* hotspot analysis identifies statistically
+                    significant clusters of high and low median household income
+                    within the Seattle-Tacoma-Bellevue metropolitan area. Red
+                    areas indicate significant high-income clusters while blue
+                    areas represent low-income clusters. The map demonstrates
+                    how spatial clustering can reveal patterns of inequality
+                    across metropolitan regions.
+                </p>
+
+                <img src="figures/figure3_seattle_income_hotspots.png"
+                     alt="Income Hotspots">
+            </div>
+
+        </section>
+
+        <!-- =========================
+             LAB 7
+        ========================== -->
+
+        <section class="project-section" id="lab7">
+
+            <h2>Lab 7 – Segregation and Diversity</h2>
+
+            <div class="project-card">
+                <h3>Seattle MSA Segregation Map</h3>
+
+                <p>
+                    This map visualizes multigroup segregation across the
+                    Seattle metropolitan area using ACS demographic data.
+                    The analysis incorporates White, Black, Asian, and Hispanic
+                    populations to measure segregation across census tracts.
+                    The map demonstrates how racial and ethnic groups are
+                    distributed unevenly throughout the metropolitan region.
+                </p>
+
+                <img src="figures/figure1_seattle_msa_segregation.png"
+                     alt="Segregation Map">
+            </div>
+
+            <div class="project-card">
+                <h3>Asian Location Quotient</h3>
+
+                <p>
+                    This location quotient map measures the relative concentration
+                    of Asian residents across census tracts in King County,
+                    Washington. Areas with higher values indicate neighborhoods
+                    where the Asian population is more concentrated relative
+                    to the county average. The map highlights spatial clustering
+                    patterns and demographic concentration throughout the region.
+                </p>
+
+                <img src="figures/figure2_seattle_msa_asian_lq.png"
+                     alt="Asian LQ Map">
+            </div>
+
+            <div class="project-card">
+                <h3>Alternative Asian LQ Visualization</h3>
+
+                <img src="figures/seattle_asian_lq_map.png"
+                     alt="Asian LQ Alternative">
+            </div>
+
+        </section>
+
+        <!-- =========================
+             LAB 9
+        ========================== -->
+
+        <section class="project-section" id="lab9">
+
+            <h2>Lab 9 – Spatial Modeling</h2>
+
+            <div class="project-card">
+                <h3>GWR Income Map</h3>
+
+                <p>
+                    This geographically weighted regression (GWR) map visualizes
+                    spatial variation in modeled relationships across the Seattle
+                    metropolitan area. GWR allows regression coefficients to vary
+                    across geographic space, revealing localized differences in
+                    how variables interact throughout the study region.
+                </p>
+
+                <img src="figures/figure1_gwr_income_map.png"
+                     alt="GWR Income Map">
+            </div>
+
+            <div class="project-card">
+                <h3>K-Means Cluster Map</h3>
+
+                <p>
+                    This k-means cluster analysis groups census tracts into
+                    clusters based on similarities in demographic and spatial
+                    variables. Different colors represent unique clusters,
+                    allowing patterns and geographic groupings to emerge across
+                    the Seattle metropolitan area. The analysis demonstrates
+                    how unsupervised machine learning can identify spatial
+                    similarities within urban regions.
+                </p>
+
+                <img src="figures/figure2_kmeans_cluster_map.png"
+                     alt="KMeans Cluster Map">
+            </div>
+
+        </section>
+
+        <!-- =========================
+             ADDITIONAL VISUALIZATIONS
+        ========================== -->
+
+        <section class="project-section">
+
+            <h2>Additional Data Visualizations</h2>
+
+            <div class="project-card">
+                <h3>Logged GDP Histogram</h3>
+                <img src="figures/logged_gdp_histogram.png"
+                     alt="Logged GDP Histogram">
+            </div>
+
+            <div class="project-card">
+                <h3>Logged GDP Scatterplot</h3>
+                <img src="figures/logged_gdp_scatterplot.png"
+                     alt="GDP Scatterplot">
+            </div>
+
+            <div class="project-card">
+                <h3>Logged GDP Analysis</h3>
+                <img src="figures/logged_gdp_analysis.png"
+                     alt="GDP Analysis">
+            </div>
+
+            <div class="project-card">
+                <h3>GDP Histogram</h3>
+                <img src="figures/gdp_histogram.png"
+                     alt="GDP Histogram">
+            </div>
+
+            <div class="project-card">
+                <h3>Seattle Metro Population</h3>
+                <img src="figures/seattle_metro_population.png"
+                     alt="Seattle Metro Population">
+            </div>
+
+            <div class="project-card">
+                <h3>tidycensus Population by State</h3>
+                <img src="figures/tidycensus_total_population_by_state.png"
+                     alt="tidycensus Population">
+            </div>
+
+            <div class="project-card">
+                <h3>NHGIS Population by State</h3>
+                <img src="figures/nhgis_total_population_by_state.png"
+                     alt="NHGIS Population">
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <p>© 2026 Hailey Rosquist</p>
+    </footer>
+
 </body>
 </html>
+```
