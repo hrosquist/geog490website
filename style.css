@@ -1,178 +1,157 @@
-* {
-  box-sizing: border-box;
-}
+```css
+/* =========================
+   GENERAL PAGE STYLING
+========================= */
 
 body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background-color: #f5f1ea;
-  color: #222;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 header {
-  background-color: #18392b;
-  color: white;
-  padding: 18px 40px;
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    background-color: #1f2937;
+    padding: 15px;
+    text-align: center;
 }
 
-nav h1 {
-  margin: 0;
-  font-size: 1.6rem;
-  letter-spacing: 1px;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 22px;
-  font-weight: bold;
+nav a:hover {
+    color: #93c5fd;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
+/* =========================
+   MAIN CONTENT
+========================= */
 
 main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 35px 25px;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 25px;
 }
 
-.hero {
-  background-color: white;
-  padding: 45px;
-  border-radius: 14px;
-  border: 2px solid #d8cfc2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 30px;
+/* =========================
+   SECTION STYLING
+========================= */
+
+.project-section {
+    margin-bottom: 90px;
 }
 
-.hero h2 {
-  font-size: 2.4rem;
-  margin-top: 0;
-  color: #18392b;
+.project-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 35px;
+    border-bottom: 4px solid #1f2937;
+    padding-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.1rem;
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.project-card {
+    background: white;
+    border: 3px solid #222;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.button-row {
-  margin-top: 25px;
+.project-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.button {
-  display: inline-block;
-  background-color: #18392b;
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  margin-right: 12px;
-  border-radius: 8px;
-  font-weight: bold;
+.project-card p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
 }
 
-.button:hover {
-  background-color: #28533f;
+/* =========================
+   IMAGE STYLING
+========================= */
+
+.project-card img {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #444;
+    border-radius: 10px;
 }
 
-.page-title {
-  background-color: #e6ddd0;
-  padding: 35px;
-  border-radius: 14px;
-  margin-bottom: 30px;
-  border-left: 8px solid #18392b;
-}
-
-.page-title h2 {
-  margin-top: 0;
-  font-size: 2.2rem;
-  color: #18392b;
-}
-
-.card,
-.figure-card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 14px;
-  border: 2px solid #d8cfc2;
-  margin-bottom: 30px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-}
-
-.card h2,
-.figure-card h2 {
-  margin-top: 0;
-  color: #18392b;
-  border-bottom: 2px solid #d8cfc2;
-  padding-bottom: 8px;
-}
-
-.card h3 {
-  color: #2f4f3e;
-  margin-bottom: 4px;
-}
-
-ul {
-  padding-left: 22px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-.figure-card img {
-  display: block;
-  width: 100%;
-  max-width: 950px;
-  margin: 20px auto;
-  border: 4px solid #18392b;
-  border-radius: 10px;
-  background-color: white;
-}
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-  background-color: #18392b;
-  color: white;
-  text-align: center;
-  padding: 18px;
-  margin-top: 30px;
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
 }
 
-@media (max-width: 700px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    margin-top: 12px;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    margin: 6px 12px 6px 0;
-  }
-
-  .hero,
-  .card,
-  .figure-card,
-  .page-title {
-    padding: 22px;
-  }
-
-  .hero h2,
-  .page-title h2 {
-    font-size: 1.8rem;
-  }
+footer p {
+    margin: 0;
 }
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-section h2 {
+        font-size: 2rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+```
