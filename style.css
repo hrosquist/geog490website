@@ -1,62 +1,39 @@
-/* =========================
-   GENERAL PAGE STYLING
-========================= */
-
 body {
-    font-family: "Georgia", "Times New Roman", serif;
+    font-family: Georgia, "Times New Roman", serif;
     margin: 0;
-    background: #f7f3ed;
-    color: #1f2937;
+    background-color: #f7f3ed;
+    color: #172033;
     line-height: 1.7;
 }
 
-/* =========================
-   HEADER / STORY OPENING
-========================= */
-
-header {
-    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+header,
+.portfolio-header {
+    background: linear-gradient(135deg, #10213f, #1e3a5f);
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 85px 20px;
 }
 
-header h1 {
+header h1,
+.portfolio-header h1 {
     font-size: 4rem;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    margin: 0 0 12px;
 }
 
-header p {
-    font-size: 1.25rem;
+header p,
+.portfolio-header p {
+    font-size: 1.2rem;
     margin: 6px 0;
-    color: #dbeafe;
+    color: #e0ecff;
 }
-
-/* =========================
-   NAVIGATION
-========================= */
-
-<nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="resume.html">CV / Resume</a>
-    <a href="portfolio.html">490 Portfolio</a>
-</nav>
-
-<nav class="lab-nav">
-    <a href="#lab3">Lab 3</a>
-    <a href="#lab5">Lab 5</a>
-    <a href="#lab7">Lab 7</a>
-    <a href="#lab9">Lab 9</a>
-</nav>
 
 .main-nav {
-    background-color: #111827;
+    background-color: #0f172a;
     padding: 18px;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 50;
 }
 
 .main-nav a {
@@ -72,20 +49,20 @@ header p {
 }
 
 .lab-nav {
-    background-color: #e5e7eb;
-    padding: 14px;
+    background-color: #e8edf5;
+    padding: 15px;
     text-align: center;
+    border-bottom: 3px solid #1e3a5f;
     position: sticky;
-    top: 58px;
-    z-index: 19;
-    border-bottom: 2px solid #cbd5e1;
+    top: 56px;
+    z-index: 49;
 }
 
 .lab-nav a {
     color: #1e3a5f;
     text-decoration: none;
     margin: 0 18px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -94,22 +71,32 @@ header p {
     text-decoration: underline;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
-
 main {
     max-width: 1200px;
     margin: 60px auto;
     padding: 0 25px;
 }
 
-/* =========================
-   LAB SECTIONS
-========================= */
+.intro-card,
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    margin-bottom: 55px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    border-left: 10px solid #1e3a5f;
+}
+
+.intro-card h2,
+.card h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    color: #1e3a5f;
+}
 
 .project-section {
     margin-bottom: 100px;
+    scroll-margin-top: 130px;
 }
 
 .project-section h2 {
@@ -120,17 +107,39 @@ main {
     color: #0f172a;
 }
 
-/* =========================
-   PROJECT CARDS
-========================= */
-
 .project-card {
-    background: #ffffff;
-    border-left: 10px solid #1e3a5f;
+    background: white;
     border-radius: 18px;
     padding: 35px;
     margin-bottom: 55px;
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    border-left: 10px solid #1e3a5f;
+}
+
+.project-card::before {
+    content: "Mapping the pattern";
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e3a5f;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+#lab5 .project-card::before {
+    content: "Analyzing space";
+}
+
+#lab7 .project-card::before {
+    content: "Interpreting inequality";
+}
+
+#lab9 .project-card::before {
+    content: "Modeling patterns";
 }
 
 .project-card h3 {
@@ -145,10 +154,6 @@ main {
     margin-bottom: 28px;
 }
 
-/* =========================
-   IMAGE STYLING
-========================= */
-
 .project-card img {
     width: 100%;
     max-width: 1100px;
@@ -160,42 +165,8 @@ main {
     background: white;
 }
 
-/* =========================
-   STORY-LIKE FLOW
-========================= */
-
-.project-card::before {
-    content: "Mapping the pattern";
-    display: inline-block;
-    background: #dbeafe;
-    color: #1e3a5f;
-    font-size: 0.85rem;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 999px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-}
-
-#lab5 .project-card::before {
-    content: "Analyzing spatial relationships";
-}
-
-#lab7 .project-card::before {
-    content: "Interpreting inequality";
-}
-
-#lab9 .project-card::before {
-    content: "Modeling geographic patterns";
-}
-
-/* =========================
-   FOOTER
-========================= */
-
 footer {
-    background: #0f172a;
+    background-color: #0f172a;
     color: white;
     text-align: center;
     padding: 35px;
@@ -207,17 +178,14 @@ footer p {
     color: #dbeafe;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
 @media (max-width: 768px) {
-
-    header h1 {
+    header h1,
+    .portfolio-header h1 {
         font-size: 2.6rem;
     }
 
-    header p {
+    header p,
+    .portfolio-header p {
         font-size: 1rem;
     }
 
@@ -227,6 +195,7 @@ footer p {
         margin: 10px 0;
     }
 
+    .main-nav,
     .lab-nav {
         position: static;
     }
@@ -236,12 +205,14 @@ footer p {
         padding: 0 18px;
     }
 
-    .project-section h2 {
-        font-size: 2rem;
-    }
-
+    .intro-card,
+    .card,
     .project-card {
         padding: 24px;
+    }
+
+    .project-section h2 {
+        font-size: 2rem;
     }
 
     .project-card h3 {
