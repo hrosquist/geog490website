@@ -37,26 +37,61 @@ header p {
    NAVIGATION
 ========================= */
 
-nav {
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="resume.html">CV / Resume</a>
+    <a href="portfolio.html">490 Portfolio</a>
+</nav>
+
+<nav class="lab-nav">
+    <a href="#lab3">Lab 3</a>
+    <a href="#lab5">Lab 5</a>
+    <a href="#lab7">Lab 7</a>
+    <a href="#lab9">Lab 9</a>
+</nav>
+
+.main-nav {
     background-color: #111827;
     padding: 18px;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
 }
 
-nav a {
+.main-nav a {
     color: white;
     text-decoration: none;
     margin: 0 22px;
     font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 0.5px;
 }
 
-nav a:hover {
+.main-nav a:hover {
     color: #bfdbfe;
+}
+
+.lab-nav {
+    background-color: #e5e7eb;
+    padding: 14px;
+    text-align: center;
+    position: sticky;
+    top: 58px;
+    z-index: 19;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.lab-nav a {
+    color: #1e3a5f;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.lab-nav a:hover {
+    color: #0f172a;
+    text-decoration: underline;
 }
 
 /* =========================
@@ -186,9 +221,14 @@ footer p {
         font-size: 1rem;
     }
 
-    nav a {
+    .main-nav a,
+    .lab-nav a {
         display: block;
         margin: 10px 0;
+    }
+
+    .lab-nav {
+        position: static;
     }
 
     main {
@@ -210,5 +250,10 @@ footer p {
 
     .project-card p {
         font-size: 1rem;
+    }
+
+    .project-card img {
+        width: 100%;
+        border-width: 4px;
     }
 }
