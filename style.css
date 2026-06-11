@@ -1,39 +1,52 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Georgia, "Times New Roman", serif;
     margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
     background-color: #f7f3ed;
     color: #172033;
     line-height: 1.7;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 header,
 .portfolio-header {
     background: linear-gradient(135deg, #10213f, #1e3a5f);
     color: white;
     text-align: center;
-    padding: 85px 20px;
+    padding: 70px 20px;
 }
 
-header h1,
-.portfolio-header h1 {
-    font-size: 4rem;
-    margin: 0 0 12px;
+.portfolio-header h1,
+header h1 {
+    font-size: 3.5rem;
+    margin: 0 0 10px;
 }
 
-header p,
-.portfolio-header p {
-    font-size: 1.2rem;
-    margin: 6px 0;
+.portfolio-header p,
+header p {
+    font-size: 1.15rem;
+    margin: 5px 0;
     color: #e0ecff;
 }
+
+/* =========================
+   MAIN WEBSITE NAV
+========================= */
 
 .main-nav {
     background-color: #0f172a;
     padding: 18px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 50;
 }
 
 .main-nav a {
@@ -48,14 +61,15 @@ header p,
     color: #bfdbfe;
 }
 
+/* =========================
+   LAB JUMP NAV
+========================= */
+
 .lab-nav {
     background-color: #e8edf5;
-    padding: 15px;
+    padding: 14px;
     text-align: center;
     border-bottom: 3px solid #1e3a5f;
-    position: sticky;
-    top: 56px;
-    z-index: 49;
 }
 
 .lab-nav a {
@@ -71,6 +85,10 @@ header p,
     text-decoration: underline;
 }
 
+/* =========================
+   MAIN CONTENT
+========================= */
+
 main {
     max-width: 1200px;
     margin: 60px auto;
@@ -78,7 +96,8 @@ main {
 }
 
 .intro-card,
-.card {
+.card,
+.project-card {
     background: white;
     border-radius: 18px;
     padding: 35px;
@@ -94,9 +113,13 @@ main {
     color: #1e3a5f;
 }
 
+/* =========================
+   PROJECT SECTIONS
+========================= */
+
 .project-section {
     margin-bottom: 100px;
-    scroll-margin-top: 130px;
+    scroll-margin-top: 30px;
 }
 
 .project-section h2 {
@@ -107,14 +130,21 @@ main {
     color: #0f172a;
 }
 
-.project-card {
-    background: white;
-    border-radius: 18px;
-    padding: 35px;
-    margin-bottom: 55px;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
-    border-left: 10px solid #1e3a5f;
+.project-card h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #1e3a5f;
 }
+
+.project-card p {
+    font-size: 1.12rem;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   STORY LABELS
+========================= */
 
 .project-card::before {
     content: "Mapping the pattern";
@@ -142,17 +172,9 @@ main {
     content: "Modeling patterns";
 }
 
-.project-card h3 {
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 18px;
-    color: #1e3a5f;
-}
-
-.project-card p {
-    font-size: 1.12rem;
-    margin-bottom: 28px;
-}
+/* =========================
+   IMAGES
+========================= */
 
 .project-card img {
     width: 100%;
@@ -164,6 +186,10 @@ main {
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
     background: white;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background-color: #0f172a;
@@ -178,14 +204,19 @@ footer p {
     color: #dbeafe;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
-    header h1,
-    .portfolio-header h1 {
-        font-size: 2.6rem;
+
+    .portfolio-header h1,
+    header h1 {
+        font-size: 2.5rem;
     }
 
-    header p,
-    .portfolio-header p {
+    .portfolio-header p,
+    header p {
         font-size: 1rem;
     }
 
@@ -193,11 +224,6 @@ footer p {
     .lab-nav a {
         display: block;
         margin: 10px 0;
-    }
-
-    .main-nav,
-    .lab-nav {
-        position: static;
     }
 
     main {
@@ -224,7 +250,6 @@ footer p {
     }
 
     .project-card img {
-        width: 100%;
         border-width: 4px;
     }
 }
