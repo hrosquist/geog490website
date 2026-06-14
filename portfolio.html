@@ -34,12 +34,20 @@
         <section class="intro-card">
             <h2>GEOG 490 Portfolio: A Spatial Story of the Seattle Region</h2>
             <p>
-                This portfolio follows my work through GEOG 490 by building a spatial
-                story about population, inequality, segregation, and modeling in the
-                Seattle-Tacoma-Bellevue metropolitan area. Each lab adds another layer:
-                first mapping census patterns, then analyzing spatial relationships,
-                then interpreting segregation and diversity, and finally using spatial
-                modeling to identify deeper geographic patterns.
+                This portfolio brings together my work from GEOG 490 into one larger spatial
+                story about population, inequality, segregation, and spatial modeling in the
+                Seattle-Tacoma-Bellevue metropolitan region. Instead of treating each lab as a
+                separate assignment, I organized the portfolio so that each section builds on the
+                last. The early labs introduce census data and basic visualization, while the later
+                labs use spatial statistics and modeling to explain deeper geographic patterns.
+            </p>
+            <p>
+                The main story of this portfolio is that population patterns are not random.
+                Where people live, where income is concentrated, where racial and ethnic groups
+                are more or less represented, and where model results change across space all
+                reveal important information about the social geography of the Seattle region.
+                The maps and graphs in this portfolio show how data science and GIS can work
+                together to make those patterns visible.
             </p>
         </section>
 
@@ -49,11 +57,16 @@
             <div class="project-card">
                 <h3>NHGIS Total Population by State</h3>
                 <p>
-                    Lab 2 begins the portfolio by comparing different ways of working with
-                    census population data in R. This chart uses NHGIS data to show total
-                    population by state. It helped me practice importing downloaded census
-                    data, checking column names, cleaning variables, and creating a basic
-                    ggplot bar chart.
+                    Lab 2 begins with exploratory data analysis using census population data.
+                    This graph compares total population by state using NHGIS data. It helped
+                    me practice downloading census data, checking column names, cleaning the
+                    dataset, and turning raw data into a readable visualization.
+                </p>
+                <p>
+                    This graph is important because it shows how large-scale population data can
+                    provide context before narrowing in on one specific region. By starting at the
+                    state level, I was able to understand how population varies across the United
+                    States before focusing more closely on the Seattle metropolitan area in later labs.
                 </p>
                 <img src="figures/nhgis_total_population_by_state.png" alt="NHGIS Total Population by State">
             </div>
@@ -62,10 +75,14 @@
                 <h3>tidycensus Total Population by State</h3>
                 <p>
                     This chart uses tidycensus to pull 2020 Decennial Census population data
-                    directly into R. Comparing this chart with the NHGIS version showed me
-                    the difference between manually downloaded census data and API-based
-                    workflows. This became important for later labs because tidycensus made
-                    it easier to quickly access demographic variables.
+                    directly into R. Compared with the NHGIS workflow, tidycensus made it easier
+                    to access census data through code instead of manually downloading files.
+                </p>
+                <p>
+                    The purpose of this graph was not only to show population by state, but also
+                    to compare two different data workflows. This became useful later in the
+                    portfolio because many of the maps depend on using tidycensus to gather
+                    demographic variables quickly and accurately.
                 </p>
                 <img src="figures/tidycensus_total_population_by_state.png" alt="tidycensus Total Population by State">
             </div>
@@ -73,10 +90,16 @@
             <div class="project-card">
                 <h3>Seattle-Tacoma-Bellevue Metro Population</h3>
                 <p>
-                    This final Lab 2 chart identifies the Seattle-Tacoma-Bellevue metropolitan
-                    area as the focus geography for later portfolio work. Choosing this metro
-                    area gave the rest of the project a clear case study location for mapping
-                    population, income, segregation, and spatial modeling patterns.
+                    This chart introduces the Seattle-Tacoma-Bellevue metropolitan area as the
+                    main geography of interest for the portfolio. Choosing one metro area gave
+                    the rest of the project a consistent location and helped connect each lab into
+                    a single story.
+                </p>
+                <p>
+                    Seattle is a useful case study because it contains dense urban neighborhoods,
+                    suburban communities, and less populated areas. This makes it a strong region
+                    for exploring population concentration, income inequality, segregation, and
+                    spatial modeling.
                 </p>
                 <img src="figures/seattle_metro_population.png" alt="Seattle Metro Population">
             </div>
@@ -88,11 +111,17 @@
             <div class="project-card">
                 <h3>Total Population Choropleth</h3>
                 <p>
-                    This choropleth map begins the story by showing where people live
-                    across King County, Washington. Darker census tracts show higher
-                    total population, while lighter areas show fewer residents. The
-                    pattern reveals a dense western urban corridor near Seattle and
-                    more sparsely populated areas toward the eastern part of the county.
+                    This choropleth map shows total population across King County, Washington.
+                    Darker census tracts represent areas with more residents, while lighter tracts
+                    show lower population totals. The map shows that population is not evenly
+                    distributed across the county.
+                </p>
+                <p>
+                    The strongest population concentration appears around Seattle and nearby
+                    urban and suburban communities. In contrast, the eastern portion of King
+                    County appears much less populated. This pattern reflects the difference
+                    between the dense urban corridor near Seattle and the more mountainous,
+                    less developed areas farther east.
                 </p>
                 <img src="figures/seattle_total_population_choropleth.png" alt="Seattle Population Choropleth">
             </div>
@@ -100,11 +129,16 @@
             <div class="project-card">
                 <h3>Dot Density Map</h3>
                 <p>
-                    The dot density map adds detail by showing population distribution
-                    as individual dots. Instead of only comparing tract totals, this map
-                    makes the concentration of people easier to see visually. Dense
-                    clusters appear around Seattle and nearby suburbs, while the eastern
-                    portion of the county has fewer dots and lower population density.
+                    The dot density map tells the population story in a different way. Instead of
+                    shading entire census tracts, it uses dots to represent people. This makes it
+                    easier to visually understand where population is clustered.
+                </p>
+                <p>
+                    Dense groups of dots appear around Seattle and surrounding communities,
+                    showing where people are most concentrated. The map also helps show that
+                    population density changes gradually across the region rather than stopping
+                    neatly at census tract boundaries. This visualization is useful because it feels
+                    more immediate and visual than a standard choropleth map.
                 </p>
                 <img src="figures/seattle_dot_density_map.png" alt="Seattle Dot Density Map">
             </div>
@@ -112,10 +146,17 @@
             <div class="project-card">
                 <h3>Young Persons Graduated Symbols</h3>
                 <p>
-                    This graduated symbol map focuses on the population under age 18.
-                    Larger circles show census tracts with more young residents. This
-                    helps show how family-oriented communities and suburban areas may
-                    have different demographic patterns than central urban neighborhoods.
+                    This graduated symbol map focuses on young people under age 18. Larger
+                    circles represent tracts with higher numbers of young residents. This adds
+                    another layer to the portfolio by showing that population patterns are not
+                    only about where people live, but also about who lives there.
+                </p>
+                <p>
+                    Areas with larger symbols may reflect places with more families, schools,
+                    and suburban residential neighborhoods. Comparing this map with the total
+                    population map helps show whether young people are concentrated in the
+                    same places as the general population or whether they follow a different
+                    spatial pattern.
                 </p>
                 <img src="figures/seattle_young_persons_graduated_symbols.png" alt="Young Persons Map">
             </div>
@@ -125,25 +166,36 @@
             <h2>Lab 5 – Spatial Analysis and Modeling</h2>
 
             <div class="project-card">
-                <h3>Portland-Vancouver Metro Tracts</h3>
+                <h3>Metropolitan Census Tracts</h3>
                 <p>
-                    This map introduces metropolitan geography by showing census tracts
-                    across the Portland-Vancouver-Hillsboro area. The metro boundary
-                    shows how urban regions can extend across state lines and include
-                    many connected communities. This lab helped me think about how
-                    boundaries shape spatial analysis.
+                    This map introduces the idea of metropolitan geography. Instead of only
+                    looking at one city or county, metropolitan regions include many connected
+                    communities that function as part of the same urban system.
                 </p>
-                <img src="figures/figure1_portland_vancouver_metro_tracts.png" alt="Portland Metro Tracts">
+                <p>
+                    Mapping census tracts within the metro boundary helped me understand how
+                    geographic boundaries shape spatial analysis. A metro area can include dense
+                    urban cores, suburban neighborhoods, and outer areas with different population
+                    and income patterns. This matters because the results of spatial analysis can
+                    change depending on the boundary used.
+                </p>
+                <img src="figures/figure1_portland_vancouver_metro_tracts.png" alt="Metro Tracts">
             </div>
 
             <div class="project-card">
                 <h3>Income Hotspot Analysis</h3>
                 <p>
-                    This hotspot analysis identifies statistically significant clusters
-                    of high and low median household income in the Seattle-Tacoma-Bellevue
-                    metropolitan area. The map moves beyond simple description by showing
-                    where income patterns cluster spatially, making regional inequality
-                    more visible.
+                    This hotspot analysis identifies statistically significant clusters of high and
+                    low median household income. Unlike a regular income map, this analysis
+                    does more than show where values are high or low. It shows where similar
+                    income values are spatially clustered.
+                </p>
+                <p>
+                    The map helps reveal regional inequality by showing that income patterns
+                    are geographically organized. High-income clusters suggest areas where wealth
+                    is concentrated, while low-income clusters point to areas where economic
+                    disadvantage may be more spatially concentrated. This lab helped me move
+                    from simple mapping toward spatial statistics.
                 </p>
                 <img src="figures/figure3_seattle_income_hotspots.png" alt="Income Hotspots">
             </div>
@@ -155,11 +207,17 @@
             <div class="project-card">
                 <h3>Seattle MSA Segregation Map</h3>
                 <p>
-                    This map examines segregation across the Seattle metropolitan area
-                    using demographic data for White, Black, Asian, and Hispanic
-                    populations. It adds a social interpretation to the portfolio by
-                    showing that population groups are not distributed evenly across
-                    space.
+                    This map examines segregation across the Seattle metropolitan area using
+                    demographic data for White, Black, Asian, and Hispanic populations. It adds
+                    a social interpretation to the portfolio by showing that racial and ethnic
+                    groups are not distributed evenly across space.
+                </p>
+                <p>
+                    The map helps show how diversity and segregation can exist at the same time.
+                    A metro area may be diverse overall, but individual neighborhoods can still
+                    show uneven patterns of concentration and separation. This visualization
+                    connects census data to larger questions about housing, access, neighborhood
+                    change, and social inequality.
                 </p>
                 <img src="figures/figure1_seattle_msa_segregation.png" alt="Segregation Map">
             </div>
@@ -167,11 +225,17 @@
             <div class="project-card">
                 <h3>Asian Location Quotient</h3>
                 <p>
-                    This location quotient map measures where Asian residents are more
-                    concentrated compared with the regional average. Higher values show
-                    neighborhoods where the Asian population has a stronger relative
-                    presence. This map helps connect demographic concentration to broader
-                    questions about settlement, community, and urban change.
+                    This location quotient map shows where Asian residents are more concentrated
+                    compared with the regional average. A higher location quotient means that
+                    the Asian population makes up a larger share of that tract than it does across
+                    the metro area overall.
+                </p>
+                <p>
+                    This map is useful because it focuses on relative concentration rather than
+                    raw population totals. A tract does not have to contain the largest number of
+                    people to have a high location quotient. Instead, the map shows where Asian
+                    residents have a stronger relative presence, helping reveal community patterns
+                    that may be hidden in a basic population map.
                 </p>
                 <img src="figures/figure2_seattle_msa_asian_lq.png" alt="Asian LQ Map">
             </div>
@@ -179,8 +243,15 @@
             <div class="project-card">
                 <h3>Alternative Asian LQ Visualization</h3>
                 <p>
-                    This alternative version provides another way of visualizing Asian
-                    population concentration across the region.
+                    This alternative version provides another way of visualizing Asian population
+                    concentration across the region. Including a second version helped me think
+                    about how design choices affect interpretation.
+                </p>
+                <p>
+                    Even when the underlying data stays the same, changes in color, classification,
+                    and layout can make certain patterns easier or harder to see. This reminded me
+                    that cartography is not just technical. It also involves communication choices
+                    that shape how viewers understand the data.
                 </p>
                 <img src="figures/seattle_asian_lq_map.png" alt="Asian LQ Alternative">
             </div>
@@ -190,12 +261,18 @@
             <h2>Lab 9 – Spatial Modeling</h2>
 
             <div class="project-card">
-                <h3>GWR Income Map</h3>
+                <h3>Geographically Weighted Regression Income Map</h3>
                 <p>
-                    The geographically weighted regression map shows how relationships
-                    between variables can change across space. Instead of assuming one
-                    relationship applies to the entire region, GWR helps reveal local
-                    variation within the Seattle metropolitan area.
+                    The geographically weighted regression map shows that relationships between
+                    variables can change across space. Instead of assuming that one model explains
+                    the entire Seattle metropolitan area, GWR allows the relationship to vary from
+                    place to place.
+                </p>
+                <p>
+                    This is important because urban regions are not uniform. A factor that helps
+                    explain income patterns in one part of the metro area may not work the same
+                    way somewhere else. This map adds depth to the portfolio because it shows how
+                    spatial modeling can reveal local variation that a single global model might miss.
                 </p>
                 <img src="figures/figure1_gwr_income_map.png" alt="GWR Income Map">
             </div>
@@ -203,50 +280,95 @@
             <div class="project-card">
                 <h3>K-Means Cluster Map</h3>
                 <p>
-                    This k-means cluster map groups census tracts based on similar
-                    demographic and spatial characteristics. The clusters create a final
-                    layer in the portfolio story by showing how statistical modeling can
-                    identify geographic patterns that may not be obvious from one map alone.
+                    This k-means cluster map groups census tracts based on similar characteristics.
+                    Instead of looking at one variable at a time, clustering helps identify areas
+                    that share similar demographic or socioeconomic profiles.
                 </p>
-                <img src="figures/figure2_kmeans_cluster_map.png" alt="KMeans Cluster Map">
+                <p>
+                    The clusters create a final layer in the portfolio story by showing how spatial
+                    patterns can be classified and summarized. The map helps identify groups of
+                    tracts that may represent different types of neighborhoods or regional zones.
+                    This lab shows how GIS and data science can work together to move from
+                    description toward pattern recognition.
+                </p>
+                <img src="figures/figure2_kmeans_cluster_map.png" alt="K-Means Cluster Map">
             </div>
         </section>
 
         <section class="project-section">
             <h2>Additional Data Visualizations</h2>
 
+            <p>
+                These additional graphs show earlier data visualization practice from the course.
+                They helped me build confidence with ggplot, histograms, scatterplots, logged
+                variables, and basic exploratory analysis. Even though they are not all part of
+                the Seattle mapping story, they show the broader technical process behind the
+                portfolio.
+            </p>
+
             <div class="project-card">
                 <h3>Logged GDP Histogram</h3>
+                <p>
+                    This histogram shows the distribution of logged GDP values. Logging the data
+                    makes highly skewed economic values easier to compare and interpret.
+                </p>
                 <img src="figures/logged_gdp_histogram.png" alt="Logged GDP Histogram">
             </div>
 
             <div class="project-card">
                 <h3>Logged GDP Scatterplot</h3>
+                <p>
+                    This scatterplot shows the relationship between logged GDP variables. It helped
+                    me practice reading relationships between two variables and thinking about how
+                    transformations can make patterns clearer.
+                </p>
                 <img src="figures/logged_gdp_scatterplot.png" alt="GDP Scatterplot">
             </div>
 
             <div class="project-card">
                 <h3>Logged GDP Analysis</h3>
+                <p>
+                    This analysis connects the GDP visualizations to broader modeling ideas. It
+                    shows how changing the scale of a variable can affect how clearly relationships
+                    appear in a graph.
+                </p>
                 <img src="figures/logged_gdp_analysis.png" alt="GDP Analysis">
             </div>
 
             <div class="project-card">
                 <h3>GDP Histogram</h3>
+                <p>
+                    This histogram shows the original GDP distribution before logging. Comparing
+                    it with the logged version shows why transformations are useful when data is
+                    unevenly distributed.
+                </p>
                 <img src="figures/gdp_histogram.png" alt="GDP Histogram">
             </div>
 
             <div class="project-card">
                 <h3>Seattle Metro Population</h3>
+                <p>
+                    This graph supports the portfolio's main geography by showing the population
+                    context for the Seattle-Tacoma-Bellevue metropolitan area.
+                </p>
                 <img src="figures/seattle_metro_population.png" alt="Seattle Metro Population">
             </div>
 
             <div class="project-card">
                 <h3>tidycensus Population by State</h3>
+                <p>
+                    This graph shows population data collected through tidycensus and represents
+                    one of the first steps in building a reproducible census data workflow.
+                </p>
                 <img src="figures/tidycensus_total_population_by_state.png" alt="tidycensus Population">
             </div>
 
             <div class="project-card">
                 <h3>NHGIS Population by State</h3>
+                <p>
+                    This graph shows population data collected through NHGIS and helped me compare
+                    downloaded census data with API-based census data.
+                </p>
                 <img src="figures/nhgis_total_population_by_state.png" alt="NHGIS Population">
             </div>
         </section>
